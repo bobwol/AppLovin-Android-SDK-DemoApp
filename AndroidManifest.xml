@@ -12,12 +12,16 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
 
+    <uses-sdk
+        android:minSdkVersion="10"
+        android:targetSdkVersion="10" />
+
     <application android:label="AppLovin Demo" >
 
         <!-- AppLovin API key. Could be obtained from AppLovin management console -->
         <meta-data
             android:name="applovin.sdk.key"
-            android:value="YOUR_SDK_KEY" />
+            android:value="FwRy8vJWNE-GNd-zcPGIAGddcQUvm-c0v2z2xGTJVXat9Trmy536Mhlz6DttCTu5Wr7S6gmbCLTLuI6rOAylsg" />
 
         <!-- This flag enables verbose logging of AppLovin SDK -->
         <meta-data
@@ -25,40 +29,51 @@
             android:value="true" />
 
         <!-- Demonstrates how to add an ad banner into a layout -->
-        <activity android:name=".AdMobMediationActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name="com.applovin.sdkdemo.AdMobMediationActivity" >
         </activity>
 
         <!-- Demonstrates how to programmatically add an ad banner into a layout -->
-        <activity android:name=".CustomBannerActivity" >
+        <activity android:name="com.applovin.sdkdemo.CustomBannerActivity" >
         </activity>
 
         <!-- Demonstrates how to show an interstitial ad -->
-        <activity android:name=".ShowInterstitialActivity" >
+        <activity android:name="com.applovin.sdkdemo.ShowInterstitialActivity" >
         </activity>
 
         <!-- Demonstrates how to add custom targeting information to ad requests -->
-        <activity android:name=".CustomTargetingActivity" >
+        <activity android:name="com.applovin.sdkdemo.CustomTargetingActivity" >
         </activity>
 
         <!-- Demonstrates how to integrate AppLovin Ads with AdWhirl -->
-        <activity android:name=".AdWhirlIntegrationDemo" >
+        <activity android:name="com.applovin.sdkdemo.AdWhirlIntegrationDemo" >
             <meta-data
                 android:name="ADWHIRL_KEY"
                 android:value="YOUR_ADWHIRL_KEY" />
         </activity>
 
         <!-- Demonstrates how to integrate AppLovin Ads with AdMob Mediation -->
-        <activity android:name=".SimpleBannerActivity" >
+        <activity android:name="com.applovin.sdkdemo.SimpleBannerActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        
         <activity
             android:name="com.google.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+        <activity
+            android:name="com.applovin.sdkdemo.MoPubBannerActivity"
+            android:label="@string/title_activity_mo_pub_mediation" >
+        </activity>
+        <activity
+            android:name="com.applovin.sdkdemo.MoPubInterstitialActivity"
+            android:label="@string/title_activity_mo_pub_mediation" >
+        </activity>
+        <activity
+            android:name="com.mopub.mobileads.MoPubActivity"
+            android:label="@string/title_activity_mo_pub_mediation" >
+        </activity>
     </application>
 
 </manifest>

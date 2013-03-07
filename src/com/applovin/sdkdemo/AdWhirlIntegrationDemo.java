@@ -21,58 +21,60 @@ import com.applovin.sdk.AppLovinSdk;
  * <p>
  * AppLovin integration uses AdWhirl Custom Events mechanism.
  * 
- *
+ * 
  * @author Basil Shikin
  */
 public class AdWhirlIntegrationDemo
-    extends Activity
-    implements AdWhirlInterface  
+        extends Activity
+        implements AdWhirlInterface
 {
     private AdWhirlLayout adWhirlLayout;
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        
+
         AppLovinSdk.initializeSdk(this);
 
-        setContentView( R.layout.adwhirl_integration_demo );
-        
-        adWhirlLayout = (AdWhirlLayout)findViewById( R.id.adwhirl );
-        adWhirlLayout.setAdWhirlInterface( this ); // This is needed to recieve AdWhirl events
+        setContentView(R.layout.adwhirl_integration_demo);
+
+        adWhirlLayout = (AdWhirlLayout) findViewById(R.id.adwhirl);
+        adWhirlLayout.setAdWhirlInterface(this); // This is needed to recieve
+                                                 // AdWhirl events
     }
-    
+
     /**
      * This method will be called by AdWhirl through Custom Event mechanism.
      * <p>
-     * Name of this method MUST be the same as one added in AdWhirl web interface.
+     * Name of this method MUST be the same as one added in AdWhirl web
+     * interface.
      */
     public void appLovinAdRequest()
     {
         // Create new and add AppLovin Ad View
-        final AppLovinAdView appLovinAdView = new AppLovinAdView(AppLovinAdSize.BANNER, this );
-        appLovinAdView.setAdLoadListener( new AppLovinAdLoadListener() 
+        final AppLovinAdView appLovinAdView = new AppLovinAdView(AppLovinAdSize.BANNER, this);
+        appLovinAdView.setAdLoadListener(new AppLovinAdLoadListener()
         {
             public void adReceived(AppLovinAd newAd)
             {
                 adWhirlLayout.adWhirlManager.resetRollover();
                 adWhirlLayout.rotateThreadedDelayed();
             }
-            
+
             public void failedToReceiveAd(int errorCode)
             {
                 adWhirlLayout.rollover();
             }
-        } );
+        });
         appLovinAdView.loadNextAd();
-        
-        adWhirlLayout.addView( appLovinAdView );
+
+        adWhirlLayout.addView(appLovinAdView);
     }
 
     /**
-     * This is a generic notification method, it is not needed
-     * for AppLovin Integration
+     * This is a generic notification method, it is not needed for AppLovin
+     * Integration
      */
     public void adWhirlGeneric()
     {

@@ -12,10 +12,72 @@
         android:text="AppLovin Simple Banner Demo" />
      
     <com.applovin.adview.AppLovinAdView
+        android:id="@+id/ALadview"
         xmlns:applovin="http://schemas.applovin.com/android/1.0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         applovin:loadAdOnCreate="true"
         />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="Other Activities"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView1"
+            android:layout_centerHorizontal="true"
+            android:onClick="buttonHandler"
+            android:text="AppLovin Interstitial" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button1"
+            android:layout_centerHorizontal="true"
+            android:onClick="buttonHandler"
+            android:text="AdMob Mediation" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button2"
+            android:layout_centerHorizontal="true"
+            android:onClick="buttonHandler"
+            android:text="MoPub Mediation (Banner)" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button3"
+            android:layout_centerHorizontal="true"
+            android:onClick="buttonHandler"
+            android:text="MoPub Mediation (Interstitial)" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button4"
+            android:layout_centerHorizontal="true"
+            android:onClick="buttonHandler"
+            android:text="AdWhirl Mediation" />
+
+    </RelativeLayout>
 
 </LinearLayout>

@@ -13,23 +13,26 @@ import com.google.ads.mediation.customevent.CustomEventInterstitial;
 import com.google.ads.mediation.customevent.CustomEventInterstitialListener;
 
 /**
- * This class must be defined and referenced from AdMob's website for AdMob Mediation
+ * This class must be defined and referenced from AdMob's website for AdMob
+ * Mediation
  * 
  * @author David Anderson
  * @since 4.2
  */
 public class AdMobMediationInterEvent implements CustomEventInterstitial
-{ 
-    
+{
+
     /**
-     * This method will be called by AdMob's Mediation through Custom Event mechanism.
+     * This method will be called by AdMob's Mediation through Custom Event
+     * mechanism.
      */
     @Override
     public void requestInterstitialAd(final CustomEventInterstitialListener listener,
             final Activity activity,
             String label,
             String serverParameter,
-            MediationAdRequest request)
+            MediationAdRequest request,
+            Object unused)
     {
         AppLovinInterstitialAdDialog dialog = AppLovinInterstitialAd.create(AppLovinSdk.getInstance(activity), activity);
 
@@ -66,6 +69,13 @@ public class AdMobMediationInterEvent implements CustomEventInterstitial
 
     @Override
     public void showInterstitial()
-    {        
+    {
+    }
+
+    @Override
+    public void destroy()
+    {
+        // TODO Auto-generated method stub
+        
     }
 }

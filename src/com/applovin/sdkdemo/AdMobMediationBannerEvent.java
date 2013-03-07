@@ -14,16 +14,18 @@ import com.google.ads.mediation.customevent.CustomEventBanner;
 import com.google.ads.mediation.customevent.CustomEventBannerListener;
 
 /**
- * This class must be defined and referenced from AdMob's website for AdMob Mediation
+ * This class must be defined and referenced from AdMob's website for AdMob
+ * Mediation
  * 
  * @author David Anderson
  * @since 4.2
  */
 public class AdMobMediationBannerEvent implements CustomEventBanner
-{ 
-    
+{
+
     /**
-     * This method will be called by AdMob's Mediation through Custom Event mechanism.
+     * This method will be called by AdMob's Mediation through Custom Event
+     * mechanism.
      */
     @Override
     public void requestBannerAd(final CustomEventBannerListener listener,
@@ -31,7 +33,8 @@ public class AdMobMediationBannerEvent implements CustomEventBanner
             String label,
             String serverParameter,
             AdSize adSize,
-            MediationAdRequest request)
+            MediationAdRequest request,
+            Object unused)
     {
 
         // Create AppLovin Ad View
@@ -63,5 +66,12 @@ public class AdMobMediationBannerEvent implements CustomEventBanner
                 listener.onReceivedAd(adView);
             }
         });
+    }
+
+    @Override
+    public void destroy()
+    {
+        // TODO Auto-generated method stub
+        
     }
 }
