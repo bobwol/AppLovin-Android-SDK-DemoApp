@@ -3,7 +3,7 @@
  * 
  * $(license_text)
  */
-package com.applovin.sdkdemo;
+package com.applovin.sdkdemoapp;
 
 import android.app.Activity;
 import android.os.Bundle;

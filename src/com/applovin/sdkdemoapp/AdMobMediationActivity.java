@@ -3,7 +3,7 @@
  * 
  * $(license_text)
  */
-package com.applovin.sdkdemo;
+package com.applovin.sdkdemoapp;
 
 import com.applovin.sdk.AppLovinSdk;
 

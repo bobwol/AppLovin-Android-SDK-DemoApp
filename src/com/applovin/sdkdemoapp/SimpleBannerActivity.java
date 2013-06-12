@@ -3,16 +3,19 @@
  * 
  * $(license_text)
  */
-package com.applovin.sdkdemo;
+package com.applovin.sdkdemoapp;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.applovin.adview.AppLovinAdView;
+import com.applovin.sdk.AppLovinAdSize;
 import com.applovin.sdk.AppLovinSdk;
+import com.applovin.sdkdemo.R;
 
 /**
  * This is the most basic example of how to add an ad.
@@ -23,6 +26,8 @@ import com.applovin.sdk.AppLovinSdk;
 public class SimpleBannerActivity
         extends Activity
 {
+
+    private AppLovinAdView ad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -50,11 +55,18 @@ public class SimpleBannerActivity
         // android:name="APPLOVIN_SDK_KEY" />
         // </application>
         //
-        setContentView(R.layout.simple_banner);
 
-        AppLovinAdView ad = (AppLovinAdView) findViewById(R.id.ALadview);
+        AppLovinSdk.getInstance(getApplicationContext()).getSettings().setBannerAdRefreshSeconds(10L);
+
+        setContentView(R.layout.simple_banner);
+        ad = (AppLovinAdView) findViewById(R.id.ALadview);
+    }
+
+    public void nextadbutton(View v)
+    {
         ad.loadNextAd();
     }
+
 
     public void buttonHandler(View v)
     {
@@ -69,13 +81,16 @@ public class SimpleBannerActivity
         {
             targetActivity = AdMobMediationActivity.class;
         }
-        else if (clicked.equals("MoPub Mediation (Banner)")) {
+        else if (clicked.equals("MoPub Mediation (Banner)"))
+        {
             targetActivity = MoPubBannerActivity.class;
         }
-        else if (clicked.equals("MoPub Mediation (Interstitial)")) {
+        else if (clicked.equals("MoPub Mediation (Interstitial)"))
+        {
             targetActivity = MoPubInterstitialActivity.class;
         }
-        else if (clicked.equals("AdWhirl Mediation")) {
+        else if (clicked.equals("AdWhirl Mediation"))
+        {
             targetActivity = AdWhirlIntegrationDemo.class;
         }
 

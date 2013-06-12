@@ -3,12 +3,11 @@
  * 
  * $(license_text)
  */
-package com.applovin.sdkdemo;
+package com.applovin.sdkdemoapp;
 
 import android.app.Activity;
 import android.location.Location;
 import android.os.Bundle;
-
 import com.applovin.sdk.AppLovinSdk;
 import com.applovin.sdk.AppLovinTargetingData;
 
@@ -80,37 +79,39 @@ public class CustomTargetingActivity
         targeting.setGender(AppLovinTargetingData.GENDER_MALE);
 
         //
-        // Set highest level of education of current user. Supported education values are
-        // defined in following constants: EDUCATION_NONE, EDUCATION_HIGH_SCHOOL, 
-        // EDUCATION_SOME_COLLEGE, EDUCATION_IN_COLLEGE, EDUCATION_BACHELORS, 
+        // Set highest level of education of current user. Supported education
+        // values are
+        // defined in following constants: EDUCATION_NONE,
+        // EDUCATION_HIGH_SCHOOL,
+        // EDUCATION_SOME_COLLEGE, EDUCATION_IN_COLLEGE, EDUCATION_BACHELORS,
         // EDUCATION_MASTERS, EDUCATION_DOCTORAL and EDUCATION_OTHER
         //
-        targeting.setEducation( AppLovinTargetingData.EDUCATION_BACHELORS );
-        
+        targeting.setEducation(AppLovinTargetingData.EDUCATION_BACHELORS);
+
         //
         // Set the marital status of the current user. Supported values are
-        // defined in the following constants: MARITAL_STATUS_NONE, 
-        // MARITAL_STATUS_SINGLE, MARITAL_STATUS_MARRIED, 
+        // defined in the following constants: MARITAL_STATUS_NONE,
+        // MARITAL_STATUS_SINGLE, MARITAL_STATUS_MARRIED,
         // MARITAL_STATUS_DIVORCED and MARITAL_STATUS_WIDOWED
         //
-        targeting.setMaritalStatus( AppLovinTargetingData.MARITAL_STATUS_SINGLE );
-        
+        targeting.setMaritalStatus(AppLovinTargetingData.MARITAL_STATUS_SINGLE);
+
         //
         // Set ethnicity of the current user. Supported values are
-        // defined in the following constants: ETHNICITY_NONE, ETHNICITY_MIXED, 
-        // ETHNICITY_ASIAN, ETHNICITY_BLACK, ETHNICITY_HISPANIC, 
+        // defined in the following constants: ETHNICITY_NONE, ETHNICITY_MIXED,
+        // ETHNICITY_ASIAN, ETHNICITY_BLACK, ETHNICITY_HISPANIC,
         // ETHNICITY_NATIVE_AMERICAN, ETHNICITY_WHITE and ETHNICITY_OTHER.
         //
-        targeting.setEthnicity( AppLovinTargetingData.ETHNICITY_MIXED );
-        
+        targeting.setEthnicity(AppLovinTargetingData.ETHNICITY_MIXED);
+
         //
         // Set the user's income. Income format can be as follows:
-        //   - An exact number like 100000 or 100K
-        //   - A range like 10K-30K
-        //   - A range like <100K
+        // - An exact number like 100000 or 100K
+        // - A range like 10K-30K
+        // - A range like <100K
         //
         targeting.setIncome("80000-120K");
-        
+
         //
         // Set the location of the current user.
         //

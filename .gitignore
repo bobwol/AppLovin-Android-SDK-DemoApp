@@ -6,3 +6,15 @@ libs
 .classpath
 
 .project
+
+AppLovin-Android-SDK-DemoApp.iml
+
+AppLovin-Android-SDK-DemoApp.ipr
+
+AppLovin-Android-SDK-DemoApp.iws
+
+gen/com/applovin/sdkdemoapp/BuildConfig.java
+
+gen/com/applovin/sdkdemoapp/Manifest.java
+
+gen/com/applovin/sdkdemoapp/R.java

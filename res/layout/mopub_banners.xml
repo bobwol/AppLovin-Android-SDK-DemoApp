@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:orientation="vertical"
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent">
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent">
 
-<RelativeLayout
-	android:id="@+id/toplayout"
-	android:orientation="vertical"
-	android:layout_width="fill_parent"
-	android:layout_height="wrap_content">
+    <RelativeLayout
+            android:id="@+id/toplayout"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
 
-	<Button
-		android:id="@+id/searchbutton"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_alignParentRight="true"
-		android:layout_marginLeft="10dp"
-		android:layout_marginTop="20dp"
-		android:text="Load Ads" />
+        <Button
+                android:id="@+id/searchbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:text="Load Ads"/>
 
-	<EditText
-	    android:id="@+id/searchtext"
-	    android:layout_width="fill_parent"
-	    android:layout_height="wrap_content"
-	    android:layout_alignTop="@id/searchbutton"
-	    android:layout_toLeftOf="@id/searchbutton"
-	    android:hint="mopub keyword" />
+        <EditText
+                android:id="@+id/searchtext"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/searchbutton"
+                android:layout_toLeftOf="@id/searchbutton"
+                android:hint="mopub keyword"/>
 
-</RelativeLayout>
+    </RelativeLayout>
 
-<com.mopub.mobileads.MoPubView
-    android:id="@+id/bannerview"
-    android:layout_width="fill_parent"
-    android:layout_height="50dp"
-    android:layout_marginTop="10dp"
-    android:background="@drawable/spacer" >
-</com.mopub.mobileads.MoPubView>
+    <com.mopub.mobileads.MoPubView
+            android:id="@+id/bannerview"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/spacer">
+    </com.mopub.mobileads.MoPubView>
 
 </LinearLayout>

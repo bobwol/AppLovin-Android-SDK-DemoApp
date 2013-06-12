@@ -1,78 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.applovin.sdkdemo"
-    android:versionCode="1"
-    android:versionName="1.0" >
+          package="com.applovin.sdkdemoapp"
+          android:versionCode="1"
+          android:versionName="1.0">
 
     <!-- These permissions are mandatory to run AppLovin SDK -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
     <!-- These permissions are strongly recommended and will result in higher performance -->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
 
     <uses-sdk
-        android:minSdkVersion="10"
-        android:targetSdkVersion="10" />
+            android:minSdkVersion="10"
+            android:targetSdkVersion="10"/>
 
-    <application android:label="AppLovin Demo" >
+    <application android:label="AppLovin SDK Demo App">
 
         <!-- AppLovin API key. Could be obtained from AppLovin management console -->
         <meta-data
-            android:name="applovin.sdk.key"
-            android:value="FwRy8vJWNE-GNd-zcPGIAGddcQUvm-c0v2z2xGTJVXat9Trmy536Mhlz6DttCTu5Wr7S6gmbCLTLuI6rOAylsg" />
+                android:name="applovin.sdk.key"
+                android:value="FwRy8vJWNE-GNd-zcPGIAGddcQUvm-c0v2z2xGTJVXat9Trmy536Mhlz6DttCTu5Wr7S6gmbCLTLuI6rOAylsg"/>
 
         <!-- This flag enables verbose logging of AppLovin SDK -->
         <meta-data
-            android:name="applovin.sdk.verbose_logging"
-            android:value="true" />
-
-        <!-- Demonstrates how to add an ad banner into a layout -->
-        <activity android:name="com.applovin.sdkdemo.AdMobMediationActivity" >
-        </activity>
+                android:name="applovin.sdk.verbose_logging"
+                android:value="true"/>
 
         <!-- Demonstrates how to programmatically add an ad banner into a layout -->
-        <activity android:name="com.applovin.sdkdemo.CustomBannerActivity" >
+        <activity android:name="com.applovin.sdkdemoapp.CustomBannerActivity">
         </activity>
 
         <!-- Demonstrates how to show an interstitial ad -->
-        <activity android:name="com.applovin.sdkdemo.ShowInterstitialActivity" >
+        <activity android:name="com.applovin.sdkdemoapp.ShowInterstitialActivity">
         </activity>
 
         <!-- Demonstrates how to add custom targeting information to ad requests -->
-        <activity android:name="com.applovin.sdkdemo.CustomTargetingActivity" >
+        <activity android:name="com.applovin.sdkdemoapp.CustomTargetingActivity">
         </activity>
 
         <!-- Demonstrates how to integrate AppLovin Ads with AdWhirl -->
-        <activity android:name="com.applovin.sdkdemo.AdWhirlIntegrationDemo" >
+        <activity android:name="com.applovin.sdkdemoapp.AdWhirlIntegrationDemo">
             <meta-data
-                android:name="ADWHIRL_KEY"
-                android:value="YOUR_ADWHIRL_KEY" />
+                    android:name="ADWHIRL_KEY"
+                    android:value="YOUR_ADWHIRL_KEY"/>
         </activity>
 
         <!-- Demonstrates how to integrate AppLovin Ads with AdMob Mediation -->
-        <activity android:name="com.applovin.sdkdemo.SimpleBannerActivity" >
+        <activity android:name="com.applovin.sdkdemoapp.SimpleBannerActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
         <activity
-            android:name="com.google.ads.AdActivity"
-            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
-        <activity
-            android:name="com.applovin.sdkdemo.MoPubBannerActivity"
-            android:label="@string/title_activity_mo_pub_mediation" >
+                android:name="com.google.ads.AdActivity">
         </activity>
         <activity
-            android:name="com.applovin.sdkdemo.MoPubInterstitialActivity"
-            android:label="@string/title_activity_mo_pub_mediation" >
+                android:name="com.applovin.sdkdemoapp.MoPubBannerActivity"
+                android:label="@string/title_activity_mo_pub_mediation">
         </activity>
         <activity
-            android:name="com.mopub.mobileads.MoPubActivity"
-            android:label="@string/title_activity_mo_pub_mediation" >
+                android:name="com.applovin.sdkdemoapp.MoPubInterstitialActivity"
+                android:label="@string/title_activity_mo_pub_mediation">
+        </activity>
+
+        <activity
+                android:name="com.mopub.mobileads.MoPubActivity">
         </activity>
     </application>
 

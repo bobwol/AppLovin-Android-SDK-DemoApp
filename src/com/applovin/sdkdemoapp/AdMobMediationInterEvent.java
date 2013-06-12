@@ -1,4 +1,4 @@
-package com.applovin.sdkdemo;
+package com.applovin.sdkdemoapp;
 
 import android.app.Activity;
 
