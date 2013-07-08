@@ -48,9 +48,8 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/button1"
                 android:layout_centerHorizontal="true"
-                android:clickable="false"
                 android:onClick="buttonHandler"
-                android:text="AdMob Mediation (DISABLED)"/>
+                android:text="AdMob Mediation"/>
 
         <Button
                 android:id="@+id/button3"
@@ -77,8 +76,7 @@
                 android:layout_below="@+id/button4"
                 android:layout_centerHorizontal="true"
                 android:onClick="buttonHandler"
-                android:clickable="false"
-                android:text="AdWhirl Mediation (DISABLED)"/>
+                android:text="AdWhirl Mediation"/>
 
         <Button
                 android:id="@+id/button6"
