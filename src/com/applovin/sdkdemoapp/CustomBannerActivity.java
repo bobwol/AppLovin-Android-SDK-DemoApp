@@ -15,12 +15,13 @@ import com.applovin.sdk.AppLovinAdSize;
 import com.applovin.sdk.AppLovinSdk;
 
 /**
- * This activity demonstrates how to programmatically add a view into the
- * layout.
+ * This activity demonstrates how to programmatically add a view into the layout.
  * 
  * @author Basil Shikin
  * @version 1.0
  */
+
+
 public class CustomBannerActivity
         extends Activity
 {
@@ -29,21 +30,17 @@ public class CustomBannerActivity
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-        super.onCreate(savedInstanceState);
+        super.onCreate( savedInstanceState );
 
-        AppLovinSdk.initializeSdk(this);
+        AppLovinSdk.initializeSdk( this );
 
-        setContentView(R.layout.custom_banner);
-
-        //
-
+        setContentView( R.layout.custom_banner );
 
         // Get an instance of AppLovin SDK
-        AppLovinSdk sdk = AppLovinSdk.getInstance(this);
+        AppLovinSdk sdk = AppLovinSdk.getInstance( this );
 
         // Create new ad view
-        adView = new AppLovinAdView(sdk, AppLovinAdSize.BANNER, this);
-        adView.setPlacement("CustomPlacement");
+        adView = new AppLovinAdView( sdk, AppLovinAdSize.BANNER, this );
 
         // NOTE: Another way to get hold of AppLovinAdView is to add it to the
         // XML layout and use findViewById() to retrieve it.
@@ -51,7 +48,7 @@ public class CustomBannerActivity
         //
         // OPTINAL: Add a listener to load next ad
         //
-        adView.setAdLoadListener(new AppLovinAdLoadListener()
+        adView.setAdLoadListener( new AppLovinAdLoadListener()
         {
             public void failedToReceiveAd(int errorCode)
             {
@@ -71,7 +68,7 @@ public class CustomBannerActivity
                 //
                 // Any additional logic could be placed here.
             }
-        });
+        } );
 
 
         //
@@ -80,8 +77,8 @@ public class CustomBannerActivity
         adView.loadNextAd();
 
         // Add the view into the layout
-        final ViewGroup adHome = (ViewGroup) findViewById(R.id.ad_home);
-        adHome.addView(adView);
+        final ViewGroup adHome = (ViewGroup) findViewById( R.id.ad_home );
+        adHome.addView( adView );
     }
 
     @Override

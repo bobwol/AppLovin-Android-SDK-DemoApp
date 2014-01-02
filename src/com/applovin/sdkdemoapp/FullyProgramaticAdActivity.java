@@ -18,8 +18,7 @@ import com.applovin.sdk.AppLovinSdk;
  * This is a demonstration of how to load ads withough using AppLovin Ad view.
  * 
  * <p>
- * <b>Please note:</b> This is a very advanced usage of the SDK. It is not
- * recommended for majority of use cases.
+ * <b>Please note:</b> This is a very advanced usage of the SDK. It is not recommended for majority of use cases.
  * </p>
  * 
  * @author Basil Shikin
@@ -33,20 +32,19 @@ public class FullyProgramaticAdActivity
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-        super.onCreate(savedInstanceState);
+        super.onCreate( savedInstanceState );
 
-        AppLovinSdk.initializeSdk(this);
+        AppLovinSdk.initializeSdk( this );
 
-        AppLovinSdk sdk = AppLovinSdk.getInstance(this);
+        AppLovinSdk sdk = AppLovinSdk.getInstance( this );
         AppLovinAdService adService = sdk.getAdService();
-        adService.loadNextAd(AppLovinAdSize.BANNER, this); // This activity
-                                                           // implements
-                                                           // AppLovinAdLoadListener
+        adService.loadNextAd( AppLovinAdSize.BANNER, this ); // This activity
+                                                             // implements
+                                                             // AppLovinAdLoadListener
     }
 
     /**
-     * This method is called when a new ad has been received. This method is
-     * invoked on a background thread.
+     * This method is called when a new ad has been received. This method is invoked on a background thread.
      * 
      * @param ad
      *            Newly received ad. Guaranteed not to be null.
@@ -66,12 +64,9 @@ public class FullyProgramaticAdActivity
     }
 
     /**
-     * This method is called when an ad could not be retrieved from the server.
-     * This method is invoked on a background thread.
+     * This method is called when an ad could not be retrieved from the server. This method is invoked on a background thread.
      * <p>
-     * Common error codes are: </br> <code>202</code> -- no ad is available</br>
-     * <code>5xx</code> -- internal server error</br>
-     * <code>negative number</code> -- internal errors </br>
+     * Common error codes are: </br> <code>202</code> -- no ad is available</br> <code>5xx</code> -- internal server error</br> <code>negative number</code> -- internal errors </br>
      * 
      * @param errorCode
      *            An error code recieved from the server.

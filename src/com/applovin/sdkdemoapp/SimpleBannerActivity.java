@@ -9,13 +9,10 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.applovin.adview.AppLovinAdView;
-import com.applovin.sdk.AppLovinAdSize;
 import com.applovin.sdk.AppLovinSdk;
-import com.applovin.sdkdemo.R;
 
 /**
  * This is the most basic example of how to add an ad.
@@ -32,9 +29,9 @@ public class SimpleBannerActivity
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-        super.onCreate(savedInstanceState);
+        super.onCreate( savedInstanceState );
 
-        AppLovinSdk.initializeSdk(this);
+        AppLovinSdk.initializeSdk( this );
 
         //
         // PLEASE NOTE:
@@ -56,10 +53,10 @@ public class SimpleBannerActivity
         // </application>
         //
 
-        AppLovinSdk.getInstance(getApplicationContext()).getSettings().setBannerAdRefreshSeconds(10L);
+        AppLovinSdk.getInstance( getApplicationContext() ).getSettings().setBannerAdRefreshSeconds( 10L );
 
-        setContentView(R.layout.simple_banner);
-        ad = (AppLovinAdView) findViewById(R.id.ALadview);
+        setContentView( R.layout.simple_banner );
+        ad = (AppLovinAdView) findViewById( R.id.ALadview );
     }
 
     public void nextadbutton(View v)
@@ -73,28 +70,12 @@ public class SimpleBannerActivity
         String clicked = ((Button) v).getText().toString();
         Class targetActivity = null;
 
-        if (clicked.equals("AppLovin Interstitial"))
+        if ( clicked.equals( "AppLovin Interstitial" ) )
         {
             targetActivity = ShowInterstitialActivity.class;
         }
-        else if (clicked.equals("AdMob Mediation"))
-        {
-            targetActivity = AdMobMediationActivity.class;
-        }
-        else if (clicked.equals("MoPub Mediation (Banner)"))
-        {
-            targetActivity = MoPubBannerActivity.class;
-        }
-        else if (clicked.equals("MoPub Mediation (Interstitial)"))
-        {
-            targetActivity = MoPubInterstitialActivity.class;
-        }
-        else if (clicked.equals("AdWhirl Mediation"))
-        {
-            targetActivity = AdWhirlIntegrationDemo.class;
-        }
 
-        Intent i = new Intent(this, targetActivity);
-        startActivity(i);
+        Intent i = new Intent( this, targetActivity );
+        startActivity( i );
     }
 }

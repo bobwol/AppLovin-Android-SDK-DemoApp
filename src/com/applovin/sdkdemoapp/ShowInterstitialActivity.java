@@ -13,11 +13,9 @@ import android.widget.Button;
 
 import com.applovin.adview.AppLovinInterstitialAd;
 import com.applovin.sdk.AppLovinSdk;
-import com.applovin.sdkdemo.R;
 
 /**
- * This activity demonstrates how to trigger a display of an interstitial ad.
- * Please see <code>interstitial_demo.xml</code> for corresponding view.
+ * This activity demonstrates how to trigger a display of an interstitial ad. Please see <code>interstitial_demo.xml</code> for corresponding view.
  * 
  * @author Basil Shikin
  * @version 1.0
@@ -28,20 +26,20 @@ public class ShowInterstitialActivity
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
-        super.onCreate(savedInstanceState);
+        super.onCreate( savedInstanceState );
 
-        AppLovinSdk.initializeSdk(this);
+        AppLovinSdk.initializeSdk( this );
 
-        setContentView(R.layout.interstitial_demo);
+        setContentView( R.layout.interstitial_demo );
 
         // Show an interstitial when a button is clicked
-        final Button showInterstitial = (Button) findViewById(R.id.button_show_interstitial);
-        showInterstitial.setOnClickListener(new OnClickListener() {
+        final Button showInterstitial = (Button) findViewById( R.id.button_show_interstitial );
+        showInterstitial.setOnClickListener( new OnClickListener() {
             public void onClick(View view)
             {
-                AppLovinInterstitialAd.show(ShowInterstitialActivity.this);
+                AppLovinInterstitialAd.show( ShowInterstitialActivity.this );
             }
-        });
+        } );
     }
 
 }

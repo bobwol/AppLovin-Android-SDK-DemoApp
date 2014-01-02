@@ -40,35 +40,6 @@
         <activity android:name="com.applovin.sdkdemoapp.CustomTargetingActivity">
         </activity>
 
-        <!-- Demonstrates how to integrate AppLovin Ads with AdWhirl -->
-        <activity android:name="com.applovin.sdkdemoapp.AdWhirlIntegrationDemo">
-            <meta-data
-                    android:name="ADWHIRL_KEY"
-                    android:value="YOUR_ADWHIRL_KEY"/>
-        </activity>
-
-        <!-- Demonstrates how to integrate AppLovin Ads with AdMob Mediation -->
-        <activity android:name="com.applovin.sdkdemoapp.SimpleBannerActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-        <activity
-                android:name="com.google.ads.AdActivity">
-        </activity>
-        <activity
-                android:name="com.applovin.sdkdemoapp.MoPubBannerActivity"
-                android:label="@string/title_activity_mo_pub_mediation">
-        </activity>
-        <activity
-                android:name="com.applovin.sdkdemoapp.MoPubInterstitialActivity"
-                android:label="@string/title_activity_mo_pub_mediation">
-        </activity>
-
-        <activity
-                android:name="com.mopub.mobileads.MoPubActivity">
-        </activity>
     </application>
 
 </manifest>
